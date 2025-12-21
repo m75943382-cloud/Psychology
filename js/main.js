@@ -133,3 +133,13 @@ document.querySelectorAll('.card, .feature-card, .shift-item, .phone-mockup, .he
     el.style.opacity = 0; // Force hidden initially via JS to avoid FOUC
     observer.observe(el);
 });
+
+// Inject screen overlay for sheen effect if missing
+document.querySelectorAll('.phone-mockup, .f-image').forEach(mockup => {
+    // Only add overlay if it doesn't already exist
+    if (!mockup.querySelector('.screen-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'screen-overlay';
+        mockup.appendChild(overlay);
+    }
+});

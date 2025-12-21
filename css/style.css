@@ -415,41 +415,92 @@ html[lang="en"] body {
     align-items: center;
 }
 
-/* Phone Mockup (CSS Only) */
+/* Phone Mockup - Premium 3D Design */
 .phone-mockup {
     position: relative;
     width: 300px;
     height: 600px;
     margin: 0 auto;
+    /* Solid Bezel - border-image doesn't work with border-radius */
     border: 12px solid #1F2937;
-    /* Dark Bezels */
-    border-radius: 40px;
-    overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 2px #374151;
-    /* Shadow + Outer Ring */
+    border-radius: 44px;
     background: #000;
+    /* Layered Shadow for Bezel Effect */
+    box-shadow:
+        0 0 0 4px #374151,
+        0 0 0 6px #111827,
+        0 25px 60px -12px rgba(0, 0, 0, 0.6),
+        0 10px 30px -10px rgba(234, 179, 8, 0.1);
+
+    /* 3D Transform Setup */
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: float 6s ease-in-out infinite;
 }
 
-/* Notch */
-.phone-mockup::before {
-    content: '';
+/* Floating Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotateX(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotateX(2deg);
+    }
+}
+
+/* 3D Tilt on Hover */
+.phone-mockup:hover {
+    animation-play-state: paused;
+    transform: perspective(1000px) rotateY(-8deg) rotateX(5deg) translateZ(20px);
+    box-shadow:
+        0 0 0 4px rgba(234, 179, 8, 0.5),
+        0 0 0 6px #111827,
+        0 35px 70px -20px rgba(0, 0, 0, 0.7),
+        0 15px 40px -15px rgba(234, 179, 8, 0.2);
+}
+
+/* Notch Removed */
+
+/* Glass Reflection Overlay & Dynamic Sheen */
+/* Glass Reflection Overlay & Dynamic Sheen */
+.phone-mockup .screen-overlay {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 25px;
-    background: #1F2937;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(105deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+    pointer-events: none;
+    z-index: 15;
+    border-radius: 32px;
+    transition: background-position 0.6s ease;
 }
 
-.phone-mockup img {
+.phone-mockup:hover .screen-overlay {
+    background-position: 200% 0;
+    transition: background-position 0.8s ease-in-out;
+}
+
+.phone-mockup img,
+.phone-mockup video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: 32px;
+    z-index: 10;
+    /* Ensure this is below .screen-overlay (z-index: 15) */
+    position: relative;
 }
 
 .feature-list {
@@ -505,35 +556,82 @@ html[lang="en"] body {
     flex-direction: row-reverse;
 }
 
-/* Phone Frame for Feature Images */
+/* Phone Frame for Feature Images - Premium Design */
 .f-image {
-    flex: 1;
+    flex-shrink: 0;
     position: relative;
-    width: 280px;
-    min-width: 280px;
-    max-width: 280px;
-    height: 560px;
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+    height: 520px;
     margin: 0 auto;
+    /* Solid Bezel */
     border: 10px solid #1F2937;
-    border-radius: 36px;
+    border-radius: 38px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 2px #374151;
     background: #000;
+    /* Layered Shadow for Bezel Effect */
+    box-shadow:
+        0 0 0 3px #374151,
+        0 0 0 5px #111827,
+        0 20px 50px -15px rgba(0, 0, 0, 0.5),
+        0 8px 25px -10px rgba(234, 179, 8, 0.08);
+    /* 3D Transform */
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Notch for Feature Images */
-.f-image::before {
-    content: '';
+/* Notch Removed */
+
+/* Dynamic Sheen for Feature Images */
+.f-image {
+    flex-shrink: 0;
+    position: relative;
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+    height: 520px;
+    margin: 0 auto;
+    /* Solid Bezel */
+    border: 10px solid #1F2937;
+    border-radius: 38px;
+    overflow: hidden;
+    background: #000;
+    /* Layered Shadow for Bezel Effect */
+    box-shadow:
+        0 0 0 3px #374151,
+        0 0 0 5px #111827,
+        0 20px 50px -15px rgba(0, 0, 0, 0.5),
+        0 8px 25px -10px rgba(234, 179, 8, 0.08);
+    /* 3D Transform */
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Styles for the JS-injected screen overlay for f-image */
+.f-image .screen-overlay {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 22px;
-    background: #1F2937;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0) 70%,
+            rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+    pointer-events: none;
+    z-index: 25;
+    border-radius: 28px;
+    transition: background-position 0.6s ease;
+}
+
+.feature-card:hover .f-image .screen-overlay {
+    background-position: 200% 0;
+    transition: background-position 0.8s ease-in-out;
 }
 
 .f-image img {
@@ -541,11 +639,18 @@ html[lang="en"] body {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s;
+    border-radius: 28px;
+    /* Removed transform transition to lock with frame */
 }
 
-.feature-card:hover .f-image img {
-    transform: scale(1.05);
+/* 3D Tilt on Feature Card Hover */
+.feature-card:hover .f-image {
+    transform: perspective(800px) rotateY(-5deg) rotateX(3deg) translateZ(15px);
+    box-shadow:
+        0 0 0 3px rgba(234, 179, 8, 0.4),
+        0 0 0 5px #111827,
+        0 30px 60px -20px rgba(0, 0, 0, 0.6),
+        0 12px 35px -12px rgba(234, 179, 8, 0.15);
 }
 
 .f-content {
