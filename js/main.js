@@ -56,7 +56,12 @@ const translations = {
         label_ios: "للايفون",
         btn_huawei: "حمل من AppGallery",
         btn_xiaomi: "Xiaomi Store",
-        btn_ios: "TestFlight"
+        btn_ios: "TestFlight",
+        popup_title: "إعداد TestFlight",
+        popup_step1: "أولاً: قم بتحميل تطبيق TestFlight من متجر أبل",
+        popup_step1_btn: "تحميل TestFlight",
+        popup_step2: "لديك TestFlight بالفعل؟",
+        popup_step2_btn: "اضغط هنا لتحميل التطبيق"
     },
     en: {
         nav_cta: "Start Free Week",
@@ -115,7 +120,12 @@ const translations = {
         label_ios: "For iPhone",
         btn_huawei: "Get on AppGallery",
         btn_xiaomi: "Xiaomi Store",
-        btn_ios: "TestFlight"
+        btn_ios: "TestFlight",
+        popup_title: "TestFlight Setup",
+        popup_step1: "Step 1: Download TestFlight from App Store",
+        popup_step1_btn: "Download TestFlight",
+        popup_step2: "Already have TestFlight?",
+        popup_step2_btn: "Tap here to Install App"
     }
 };
 
@@ -185,5 +195,28 @@ document.querySelectorAll('.phone-mockup, .f-image').forEach(mockup => {
         const overlay = document.createElement('div');
         overlay.className = 'screen-overlay';
         mockup.appendChild(overlay);
+    }
+});
+
+// TestFlight Popup Logic
+const popup = document.getElementById('ios-popup');
+const iosBtns = document.querySelectorAll('.btn-ios');
+const closeBtn = document.querySelector('.popup-close');
+
+iosBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        popup.classList.add('active');
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    popup.classList.remove('active');
+});
+
+// Close when clicking outside content
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+        popup.classList.remove('active');
     }
 });
