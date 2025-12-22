@@ -760,32 +760,100 @@ html[dir="ltr"] .check-list li::before {
     }
 }
 
-.store-buttons {
+/* Premium Store Buttons */
+.cta-wrapper {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
-.store-btn {
-    color: var(--white);
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 10px 20px;
-    border-radius: var(--radius-s);
-    transition: 0.3s;
+.cta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.cta-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary-yellow);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.store-btn-premium {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-    background: rgba(255, 255, 255, 0.05);
+    gap: 12px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    min-width: 200px;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.store-btn:hover {
-    background: var(--white);
-    color: var(--text-dark);
-    border-color: var(--white);
-    transform: translateY(-2px);
+.store-btn-premium svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+
+.store-btn-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+}
+
+/* Brand Colors */
+.btn-huawei {
+    background: linear-gradient(135deg, #C7000B, #900008);
+    border-color: #C7000B;
+}
+
+.btn-huawei:hover {
+    box-shadow: 0 10px 25px rgba(199, 0, 11, 0.4);
+}
+
+.btn-xiaomi {
+    background: linear-gradient(135deg, #FF6900, #D95900);
+    border-color: #FF6900;
+}
+
+.btn-xiaomi:hover {
+    box-shadow: 0 10px 25px rgba(255, 105, 0, 0.4);
+}
+
+.btn-ios {
+    background: linear-gradient(135deg, #0066CC, #004C99);
+    border-color: #0066CC;
+}
+
+.btn-ios:hover {
+    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.4);
+}
+
+/* Mobile Responsiveness for Buttons */
+@media (max-width: 768px) {
+    .cta-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .store-btn-premium {
+        width: 100%;
+        max-width: 300px;
+        min-height: 60px;
+    }
 }
 
 /* Socials & Footer Logo */
