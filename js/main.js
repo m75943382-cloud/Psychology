@@ -1,5 +1,9 @@
 const translations = {
     ar: {
+        nav_home: "الرئيسية",
+        nav_problem: "المشكلة",
+        nav_features: "المميزات",
+        nav_faq: "الأسئلة الشائعة",
         nav_cta: "ابدأ أسبوعك المجاني",
         hero_title: `استعد لزمالة الطب النفسي<br>وأنت على رأس العمل..<br><span class="highlight">بدون أن تحترق.</span>`,
         hero_subtitle: `خلّينا نكون واقعيين.. مفيش وقت.. مفيش طاقة..<br>والـ textbooks أكبر من اليوم نفسه.<br><strong>ومع ذلك… الامتحان جاي.</strong>`,
@@ -64,6 +68,10 @@ const translations = {
         popup_step2_btn: "نزل التطبيق من هنا"
     },
     en: {
+        nav_home: "Home",
+        nav_problem: "Problem",
+        nav_features: "Features",
+        nav_faq: "FAQ",
         nav_cta: "Start Free Week",
         hero_title: `Prepare for Psychiatry Fellowship<br>While Working Full-time..<br><span class="highlight">Without Burning Out.</span>`,
         hero_subtitle: `Let's be realistic.. No time.. No energy..<br>Textbooks are bigger than the day itself.<br><strong>Yet… The exam is coming.</strong>`,
@@ -142,6 +150,23 @@ langToggleBtn.addEventListener('click', () => {
     langToggleBtn.textContent = newLang === 'ar' ? 'English' : 'العربية';
 
     updateContent(newLang);
+});
+
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
 
 function updateContent(lang) {
