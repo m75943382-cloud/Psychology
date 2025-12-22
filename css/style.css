@@ -705,10 +705,46 @@ html[dir="ltr"] .f-content {
 
 /* Footer */
 .footer {
-    background-color: #0F172A;
-    /* Deep Navy */
+    background: radial-gradient(circle at 50% 0%, #1e293b, #020617);
     color: var(--white);
-    padding: 80px 0 40px;
+    padding: 100px 0 60px;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(247, 169, 19, 0.08), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer h2[data-i18n="final_title"] {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, #fff, #cbd5e1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Fallback for text visibility if gradient clip fails or for better glow */
+@supports (-webkit-background-clip: text) {
+    .footer h2[data-i18n="final_title"] {
+        text-shadow: none;
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+    }
 }
 
 .decision-box {
@@ -825,7 +861,7 @@ html[dir="ltr"] .check-list li::before {
     min-width: 200px;
     justify-content: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 

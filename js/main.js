@@ -60,8 +60,8 @@ const translations = {
         popup_title: "إعداد TestFlight",
         popup_step1: "أولاً: قم بتحميل تطبيق TestFlight من متجر أبل",
         popup_step1_btn: "تحميل TestFlight",
-        popup_step2: "لديك TestFlight بالفعل؟",
-        popup_step2_btn: "اضغط هنا لتحميل التطبيق"
+        popup_step2: "لديك TestFlight بالفعل أو قمت بتحميله؟",
+        popup_step2_btn: "نزل التطبيق من هنا"
     },
     en: {
         nav_cta: "Start Free Week",
