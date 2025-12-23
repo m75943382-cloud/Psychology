@@ -31,11 +31,11 @@ const translations = {
         pain_3: "لو مش عارف تبدأ منين علشان تعدى الامتحان",
 
         // Value Proposition
-        value_title: "في Psychiatry Notes بيحوّل مذاكرة الزمالة من “مجهود عشوائي” إلى <strong>نظام يومي واضح</strong>:",
+        value_title: "في Psychiatry Notes بيحوّل مذاكرة الزمالة من “مجهود عشوائي” إلى <strong>نظام يومي واضح</strong>",
         value_desc: "تتفرج صح، تحل صح … تعدي الامتحان .",
 
         // What You Get
-        wyg_title: "جوا التطبيق هتلاقي:",
+        wyg_title: "جوا التطبيق هتلاقي",
         wyg_video_title: "شروحات فيديو",
         wyg_video_desc: "شرح مركز مبسط للكتاب<br>رسومات توضيحية تسهل المذاكرة<br>شرح الفيديو بشكل نقاشي بين شخصين<br>خلاصة اي موضوع فى ربع ساعة",
         wyg_book_title: "كتاب متكامل",
@@ -51,10 +51,10 @@ const translations = {
         comp_new_points: "✅ خطة واضحة كل يوم<br>🎯 فيديو → كتاب → أسئلة<br>🎓 تعدي الامتحان بثقة",
 
         // How It Works
-        hiw_title: "ازاي هتستخدمه؟... في 3 خطوات:",
-        hiw_step_1: "1. <strong>حمّل التطبيق</strong> وسجّل حسابك",
-        hiw_step_2: "2. اختار <strong>هدفك وموعد الامتحان</strong>",
-        hiw_step_3: "3. امشي على الخطة:<br><strong>اتفرج على فيديو - ذاكر من كتاب - حل بنك أسئلة</strong>",
+        hiw_title: "ازاي هتستخدمه؟... في 3 خطوات",
+        hiw_step_1: "<strong>حمّل التطبيق</strong> وسجّل حسابك",
+        hiw_step_2: "اختار <strong>هدفك وموعد الامتحان</strong>",
+        hiw_step_3: "امشي على الخطة:<br><strong>اتفرج على فيديو - ذاكر من كتاب - حل بنك أسئلة</strong>",
         hiw_cta: "ابدأ مجانًا الآن",
 
         // Pricing
@@ -69,6 +69,9 @@ const translations = {
         save_amount_badge: "وفر 600 جنيه!",
         yearly_breakdown: "يعني الشهر واقف بـ 100 جنيه بس",
         price_reassurance: "<strong>إلغاء في أي وقت</strong><br><strong>الدفع آمن</strong><br><strong>الدعم بيرد عليك</strong> داخل التطبيق/واتساب/تيليجرام",
+        reassurance_cancel: "إلغاء في أي وقت",
+        reassurance_secure: "الدفع آمن",
+        reassurance_support: "الدعم بيرد عليك بسرعة",
 
         // FAQ
         faq_title: "الأسئلة الشائعة",
@@ -90,12 +93,13 @@ const translations = {
 
         // Legacy / Shared
         final_title: "لو كملت للآخر… غالبًا ده ليك",
-        for_you: "الكورس ده ليك لو:",
+        for_you: "الكورس ده ليك لو",
         chk_1: "عايز مصدر واحد موثوق",
         chk_2: "عايز خطة تمشي عليها",
         chk_3: "عايز تدخل الامتحان وإنت فاهم",
         final_btn: "ابدأ أسبوعك المجاني الآن",
         final_note: "بدون فيزا - بدون مخاطرة",
+        guarantee_text: "اشترك بدون فيزا - الغاء في اي وقت",
         trust_text: `<span style="color: var(--primary-yellow);">★</span> يثق بنا أكثر من <strong>2000 طبيب</strong>`,
         store_ios: "TestFlight (iOS)",
         store_xiaomi: "Xiaomi Store",
@@ -159,11 +163,11 @@ const translations = {
         pain_3: "Don't know where to start to pass?",
 
         // Value Proposition
-        value_title: "Psychiatry Notes turns Fellowship study from \"Random Effort\" to a <strong>Clear Daily System</strong>:",
+        value_title: "Psychiatry Notes turns Fellowship study from \"Random Effort\" to a <strong>Clear Daily System</strong>",
         value_desc: "Watch right, solve right... Pass the exam.",
 
         // What You Get
-        wyg_title: "What's inside the App:",
+        wyg_title: "What's inside the App",
         wyg_video_title: "Video Explanations",
         wyg_video_desc: "Condensed simplified book explanation<br>Illustrations to ease studying<br>Discussion-style video format<br>Summary of any topic in 15 mins",
         wyg_book_title: "The Book",
@@ -179,10 +183,10 @@ const translations = {
         comp_new_points: "✅ Clear daily plan<br>🎯 Video → Book → Questions<br>🎓 Pass with confidence",
 
         // How It Works
-        hiw_title: "How to use it?... In 3 steps:",
-        hiw_step_1: "1. <strong>Download App</strong> and Register",
-        hiw_step_2: "2. Choose <strong>Goal and Exam Date</strong>",
-        hiw_step_3: "3. Follow the plan:<br><strong>Watch Video - Study Book - Solve QBank</strong>",
+        hiw_title: "How to use it?... In 3 steps",
+        hiw_step_1: "<strong>Download App</strong> and Register",
+        hiw_step_2: "Choose <strong>Goal and Exam Date</strong>",
+        hiw_step_3: "Follow the plan:<br><strong>Watch Video - Study Book - Solve QBank</strong>",
         hiw_cta: "Start Free Now",
 
         // Pricing
@@ -197,6 +201,9 @@ const translations = {
         save_amount_badge: "Save 600 EGP!",
         yearly_breakdown: "Equivalent to 100 EGP/Month",
         price_reassurance: "<strong>Cancel Anytime</strong><br><strong>Secure Payment</strong><br><strong>Support Responds</strong> in App/WhatsApp/Telegram",
+        reassurance_cancel: "Cancel Anytime",
+        reassurance_secure: "Secure Payment",
+        reassurance_support: "Quick Support Response",
 
         // FAQ
         faq_title: "Frequently Asked Questions",
@@ -217,14 +224,15 @@ const translations = {
         faq_new_3_a: "Yes — You will see <strong>completion rates</strong> + <strong>weak points</strong> + review recommendations.",
 
         // Legacy / Shared
-        final_title: "If you read this far... This is likely for you",
-        for_you: "This course is for you if:",
-        chk_1: "You want one trusted source",
+        final_title: "If you've made it this far... this is for you",
+        for_you: "This course is for you if",
+        chk_1: "You want a single reliable source",
         chk_2: "You want a plan to follow",
-        chk_3: "You want to enter the exam understanding",
+        chk_3: "You want to enter the exam with confidence",
         final_btn: "Start Your Free Week Now",
-        final_note: "No Visa - No Risk",
-        trust_text: `<span style="color: var(--primary-yellow);">★</span> Trusted by over <strong>2000 doctors</strong>`,
+        final_note: "No Credit Card - Cancel Anytime",
+        guarantee_text: "No Credit Card - Cancel Anytime",
+        trust_text: `<span style="color: var(--primary-yellow);">★</span> Trusted by over <strong>2000 Doctors</strong>`,
         store_ios: "TestFlight (iOS)",
         store_xiaomi: "Xiaomi Store",
         store_apk: "Direct APK",
