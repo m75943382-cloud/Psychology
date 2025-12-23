@@ -2212,7 +2212,15 @@ body {
     object-fit: cover;
     border-radius: 40px;
     position: relative;
-    box-shadow: none !important;
+    box-shadow:
+        /* Inner shadow - top edge (light coming from top) */
+        inset 0 6px 15px rgba(255, 255, 255, 0.15),
+        /* Inner shadow - left edge highlight */
+        inset 6px 0 15px rgba(255, 255, 255, 0.08),
+        /* Inner shadow - bottom edge (depth) */
+        inset 0 -8px 20px rgba(0, 0, 0, 0.45),
+        /* Inner shadow - right edge (depth) */
+        inset -6px 0 18px rgba(0, 0, 0, 0.3);
     border: none !important;
 }
 
