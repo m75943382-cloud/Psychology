@@ -27,15 +27,15 @@
         "pain_1": "لو بتفتح التيكست بوك وبتقف قدامه مستتقله",
         "pain_2": "لو الشغل مخليك تحس إن مفيش وقت تذاكر للامتحان",
         "pain_3": "لو مش عارف تبدأ منين علشان تعدى الامتحان",
-        "value_title": "في Psychiatry Notes بيحوّل مذاكرة الزمالة من \\\"مجهود عشوائي\\\" إلى <strong>نظام يومي واضح</strong>",
+        "value_title": "في Psychiatry Notes بيحوّل مذاكرة الزمالة من \"مجهود عشوائي\" إلى <strong>نظام يومي واضح</strong>",
         "value_desc": "تتفرج صح، تحل صح … تعدي الامتحان .",
         "wyg_title": "جوا التطبيق هتلاقي",
         "wyg_video_title": "شروحات فيديو",
-        "wyg_video_desc": "شرح مركز مبسط للكتاب<br>رسومات توضيحية تسهل المذاكرة<br>شرح الفيديو بشكل نقاشي بين شخصين<br>خلاصة اي موضوع فى ربع ساعة",
+        "wyg_video_desc": "<ul class=\"wyg-points\"><li>شرح مركز مبسط للكتاب</li><li>رسومات توضيحية تسهل المذاكرة</li><li>شرح الفيديو بشكل نقاشي بين شخصين</li><li>خلاصة اي موضوع فى ربع ساعة</li></ul>",
         "wyg_book_title": "كتاب متكامل",
-        "wyg_book_desc": "كتاب مصمم على منهج الزمالة المصرية بالزبط<br>مدمج بالكتاب المعلومات الزايده فى بنوك الاسئلة<br>الكتاب الكترونى علشان تقدر تذاكر من اي حته<br>تقدر تطلب النسخه الورقيه وتوصلك لحد البيت",
+        "wyg_book_desc": "<ul class=\"wyg-points\"><li>كتاب مصمم على منهج الزمالة المصرية بالزبط</li><li>مدمج بالكتاب المعلومات الزايده فى بنوك الاسئلة</li><li>الكتاب الكترونى علشان تقدر تذاكر من اي حته</li><li>تقدر تطلب النسخه الورقيه وتوصلك لحد البيت</li></ul>",
         "wyg_qbank_title": "بنك اسئلة",
-        "wyg_qbank_desc": "اهم بنوك الاسئلة اللى بتيجي منها الامتحان<br>الاسئلة محلولة بتفسير الاجابة الصح والغلط<br>محاكاة للامتحان بشكل كامل وواقعى<br>مراجعة ذكية للاسئلة اللى حافظها او غلطت فيها<br>تقدر تذاكر بالموضوع وبالشابتر بحيث تدرب واحده واحده",
+        "wyg_qbank_desc": "<ul class=\"wyg-points\"><li>اهم بنوك الاسئلة اللى بتيجي منها الامتحان</li><li>الاسئلة محلولة بتفسير الاجابة الصح والغلط</li><li>محاكاة للامتحان بشكل كامل وواقعى</li><li>مراجعة ذكية للاسئلة اللى حافظها او غلطت فيها</li><li>تقدر تذاكر بالموضوع وبالشابتر بحيث تدرب واحده واحده</li></ul>",
         "syllabus_title": "فهرس المحتوى",
         "syllabus_cat_psychology": "علم النفس",
         "syllabus_cat_development": "التطور البشري",
@@ -44,13 +44,14 @@
         "syllabus_cat_clinical": "الفحص السريري",
         "comp_title": "مقارنة سريعة",
         "comp_old_title": "الطريقة القديمة",
-        "comp_old_points": "😵 توهان في الكتب<br>⏰ وقت بيضيع في مذاكرة مش مركزة<br>🔁 نفس الأخطاء بتتكرر",
+        "comp_old_points": "• توهان في الكتب<br>• وقت بيضيع في مذاكرة مش مركزة<br>• نفس الأخطاء بتتكرر",
         "comp_new_title": "مع Psychiatry Notes",
-        "comp_new_points": "✅ خطة واضحة كل يوم<br>🎯 فيديو → كتاب → أسئلة<br>🎓 تعدي الامتحان بثقة",
-        "hiw_title": "ازاي هتستخدمه؟... في 3 خطوات",
+        "comp_new_points": "• خطة واضحة كل يوم<br>• فيديو ← كتاب ← أسئلة<br>• تعدي الامتحان بثقة",
+        "hiw_title": "ازاي هتستخدمه؟... في 4 خطوات",
         "hiw_step_1": "<strong>حمّل التطبيق</strong> وسجّل حسابك",
-        "hiw_step_2": "اختار <strong>هدفك وموعد الامتحان</strong>",
-        "hiw_step_3": "امشي على الخطة:<br><strong>اتفرج على فيديو - ذاكر من كتاب - حل بنك أسئلة</strong>",
+        "hiw_step_2": "ابدأ بمشاهدة <strong>الفيديوهات والمذاكرة</strong> بسهولة",
+        "hiw_step_3": "اتمرن على اللي ذاكرته من <strong>بنك الأسئلة</strong>",
+        "hiw_step_4": "<strong>النجاح مجرد وقت</strong> مش أكتر",
         "hiw_cta": "ابدأ مجانًا الآن",
         "price_free_title": "ابدأ مجانًا",
         "price_free_desc": "<strong>أول أسبوع مجاني</strong> علشان تجرّب وتشوف هل النظام مناسب لك ولا لأ.",
@@ -153,11 +154,11 @@
         "value_desc": "Watch right, solve right... Pass the exam.",
         "wyg_title": "What's inside the App",
         "wyg_video_title": "Video Explanations",
-        "wyg_video_desc": "Condensed simplified book explanation<br>Illustrations to ease studying<br>Discussion-style video format<br>Summary of any topic in 15 mins",
+        "wyg_video_desc": "<ul class=\"wyg-points\"><li>Condensed simplified book explanation</li><li>Illustrations to ease studying</li><li>Discussion-style video format</li><li>Summary of any topic in 15 mins</li></ul>",
         "wyg_book_title": "The Book",
-        "wyg_book_desc": "Designed exactly for the Egyptian Fellowship curriculum<br>Integrated with extra QBank info<br>Digital book to study from anywhere<br>Order hard copy delivered to your door",
+        "wyg_book_desc": "<ul class=\"wyg-points\"><li>Designed exactly for the Egyptian Fellowship curriculum</li><li>Integrated with extra QBank info</li><li>Digital book to study from anywhere</li><li>Order hard copy delivered to your door</li></ul>",
         "wyg_qbank_title": "Question Bank",
-        "wyg_qbank_desc": "Top banks where exams come from<br>Solved with explanations for right and wrong answers<br>Full and realistic exam simulation<br>Smart review for memorized or wrong questions<br>Study by topic and chapter to practice step-by-step",
+        "wyg_qbank_desc": "<ul class=\"wyg-points\"><li>Top banks where exams come from</li><li>Solved with explanations for right and wrong answers</li><li>Full and realistic exam simulation</li><li>Smart review for memorized or wrong questions</li><li>Study by topic and chapter to practice step-by-step</li></ul>",
         "syllabus_title": "Content Index",
         "syllabus_cat_psychology": "Psychology",
         "syllabus_cat_development": "Human Development",
@@ -166,13 +167,14 @@
         "syllabus_cat_clinical": "Clinical Examination",
         "comp_title": "Quick Comparison",
         "comp_old_title": "The Old Way",
-        "comp_old_points": "😵 Lost in textbooks<br>⏰ Wasted time on unfocused study<br>🔁 Same mistakes repeated",
+        "comp_old_points": "• Lost in textbooks<br>• Wasted time on unfocused study<br>• Same mistakes repeated",
         "comp_new_title": "With Psychiatry Notes",
-        "comp_new_points": "✅ Clear daily plan<br>🎯 Video → Book → Questions<br>🎓 Pass with confidence",
-        "hiw_title": "How to use it?... In 3 steps",
+        "comp_new_points": "• Clear daily plan<br>• Video → Book → Questions<br>• Pass with confidence",
+        "hiw_title": "How to use it?... In 4 steps",
         "hiw_step_1": "<strong>Download App</strong> and Register",
-        "hiw_step_2": "Choose <strong>Goal and Exam Date</strong>",
-        "hiw_step_3": "Follow the plan:<br><strong>Watch Video - Study Book - Solve QBank</strong>",
+        "hiw_step_2": "Start <strong>Watching and Studying</strong> easily",
+        "hiw_step_3": "Practice what you studied in <strong>QBank</strong>",
+        "hiw_step_4": "<strong>Success is just time</strong> and nothing more",
         "hiw_cta": "Start Free Now",
         "price_free_title": "Start Free",
         "price_free_desc": "<strong>First week free</strong> to try and see if the system fits you.",

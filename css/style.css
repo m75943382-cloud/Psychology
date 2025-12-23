@@ -311,7 +311,7 @@ html[lang="en"] body {
     font-size: 3.5rem;
     font-weight: 800;
     /* Extra bold like reference */
-    line-height: 1.2;
+    line-height: 1.5;
     margin-bottom: 24px;
     color: var(--white);
     /* No text-shadow for clean look */
@@ -1229,9 +1229,9 @@ html[dir="ltr"] .check-list li::before {
 .cta-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 24px;
     margin-top: 40px;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1254,32 +1254,35 @@ html[dir="ltr"] .check-list li::before {
 .store-btn-premium {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 14px 16px;
-    border-radius: 14px;
+    gap: 15px;
+    padding: 0 20px;
+    border-radius: 18px;
     text-decoration: none;
     color: white;
-    font-weight: 600;
-    font-size: 0.85rem;
-    width: 100%;
-    max-width: 280px;
-    min-height: 56px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    width: 300px;
+    /* Fixed width for visual uniformity */
+    max-width: 100%;
+    /* Responsive safety */
+    height: 80px;
+    /* Fixed height for perfect uniformity */
     justify-content: center;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     white-space: nowrap;
     box-sizing: border-box;
 }
 
 .store-btn-premium svg,
 .store-btn-premium img {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     fill: currentColor;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .store-btn-premium:hover {
@@ -2110,7 +2113,7 @@ body {
 
     .hero h1 {
         font-size: 1.5rem !important;
-        line-height: 1.4;
+        line-height: 1.6;
         margin-bottom: 12px;
         word-wrap: break-word;
     }
@@ -2490,6 +2493,45 @@ body {
     opacity: 1 !important;
 }
 
+.wyg-points {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: right;
+}
+
+html[dir="ltr"] .wyg-points {
+    text-align: left;
+}
+
+.wyg-points li {
+    position: relative;
+    padding-right: 28px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+html[dir="ltr"] .wyg-points li {
+    padding-right: 0;
+    padding-left: 28px;
+}
+
+.wyg-points li::before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    color: var(--primary-yellow);
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+html[dir="ltr"] .wyg-points li::before {
+    right: auto;
+    left: 0;
+}
+
 .wyg-content {
     opacity: 1 !important;
 }
@@ -2503,7 +2545,7 @@ body {
 
 .hiw-steps {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
     margin: 60px 0;
     counter-reset: step;
@@ -2789,7 +2831,7 @@ body {
     }
 
     .hiw-steps {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .pricing-header-box {

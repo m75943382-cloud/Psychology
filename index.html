@@ -259,8 +259,7 @@
             <div class="wyg-item">
                 <div class="wyg-content">
                     <h3 data-i18n="wyg_video_title">شروحات فيديو</h3>
-                    <p class="wyg-desc" data-i18n="wyg_video_desc">شرح مركز مبسط للكتاب<br>رسومات توضيحية تسهل
-                        المذاكرة<br>شرح الفيديو بشكل نقاشي بين شخصين<br>خلاصة اي موضوع فى ربع ساعة</p>
+                    <div class="wyg-desc" data-i18n="wyg_video_desc"></div>
                 </div>
                 <!-- Added phone-frame wrapper -->
                 <div class="wyg-media">
@@ -274,9 +273,7 @@
             <div class="wyg-item reverse">
                 <div class="wyg-content">
                     <h3 data-i18n="wyg_book_title">كتاب متكامل</h3>
-                    <p class="wyg-desc" data-i18n="wyg_book_desc">كتاب مصمم على منهج الزمالة المصرية بالزبط<br>مدمج
-                        بالكتاب المعلومات الزايده فى بنوك الاسئلة<br>الكتاب الكترونى علشان تقدر تذاكر من اي حته<br>تقدر
-                        تطلب النسخه الورقيه وتوصلك لحد البيت</p>
+                    <div class="wyg-desc" data-i18n="wyg_book_desc"></div>
                 </div>
                 <div class="wyg-media">
                     <div class="phone-frame">
@@ -290,9 +287,7 @@
             <div class="wyg-item">
                 <div class="wyg-content">
                     <h3 data-i18n="wyg_qbank_title">بنك اسئلة</h3>
-                    <p class="wyg-desc" data-i18n="wyg_qbank_desc">اهم بنوك الاسئلة اللى بتيجي منها الامتحان<br>الاسئلة
-                        محلولة بتفسير الاجابة الصح والغلط<br>محاكاة للامتحان بشكل كامل وواقعى<br>مراجعة ذكية للاسئلة
-                        اللى حافظها او غلطت فيها<br>تقدر تذاكر بالموضوع وبالشابتر بحيث تدرب واحده واحده</p>
+                    <div class="wyg-desc" data-i18n="wyg_qbank_desc"></div>
                 </div>
                 <div class="wyg-media">
                     <div class="phone-frame">
@@ -362,17 +357,33 @@
             <div class="comparison-container">
                 <div class="compare-card compare-old">
                     <div class="compare-tag" data-i18n="comp_old_title">الطريقة القديمة</div>
-                    <div class="compare-icon">✖️</div>
+                    <div class="compare-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
                     <p data-i18n="comp_old_points"></p>
                 </div>
 
                 <div class="compare-divider">
-                    <div class="divider-icon">⚡</div>
+                    <div class="divider-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
                 </div>
 
                 <div class="compare-card compare-new">
                     <div class="compare-tag" data-i18n="comp_new_title">مع Psychiatry Notes</div>
-                    <div class="compare-icon">✅</div>
+                    <div class="compare-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
                     <p data-i18n="comp_new_points"></p>
                 </div>
             </div>
@@ -382,13 +393,12 @@
     <!-- How It Works (NEW) -->
     <section class="section hiw-section" id="how-it-works">
         <div class="container">
-            <h2 class="section-title text-center" data-i18n="hiw_title">ازاي هتستخدمه؟... في 3 خطوات</h2>
+            <h2 class="section-title text-center" data-i18n="hiw_title">ازاي هتستخدمه؟... في 4 خطوات</h2>
             <div class="hiw-steps">
                 <div class="hiw-step">
                     <div class="hiw-step-num">1</div>
                     <p class="hiw-text" data-i18n="hiw_step_1"></p>
                 </div>
-                <!-- Arrow? CSS gap implies space, simpler without arrow for now -->
                 <div class="hiw-step">
                     <div class="hiw-step-num">2</div>
                     <p class="hiw-text" data-i18n="hiw_step_2"></p>
@@ -396,6 +406,10 @@
                 <div class="hiw-step">
                     <div class="hiw-step-num">3</div>
                     <p class="hiw-text" data-i18n="hiw_step_3"></p>
+                </div>
+                <div class="hiw-step">
+                    <div class="hiw-step-num">4</div>
+                    <p class="hiw-text" data-i18n="hiw_step_4"></p>
                 </div>
             </div>
 
