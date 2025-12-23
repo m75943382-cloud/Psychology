@@ -127,6 +127,9 @@ const translations = {
         popup_step1_btn: "تحميل TestFlight",
         popup_step2: "لديك TestFlight بالفعل أو قمت بتحميله؟",
         popup_step2_btn: "نزل التطبيق من هنا",
+        popup_tip: "نصيحة: انسخ الرابط قبل ما تروح تحمل TestFlight عشان ترجعله بسهولة",
+        popup_copy_btn: "نسخ رابط التطبيق",
+        popup_copied: "✓ تم النسخ!",
         plan_monthly_label: "شهري",
         plan_3months_label: "3 شهور",
         plan_6months_label: "6 شهور",
@@ -266,6 +269,9 @@ const translations = {
         popup_step1_btn: "Download TestFlight",
         popup_step2: "Already have TestFlight?",
         popup_step2_btn: "Tap here to Install App",
+        popup_tip: "Pro tip: Copy the link before downloading TestFlight so you can easily return",
+        popup_copy_btn: "Copy App Link",
+        popup_copied: "✓ Copied!",
         plan_monthly_label: "Monthly",
         plan_3months_label: "3 Months",
         plan_6months_label: "6 Months",
@@ -496,4 +502,44 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof trackEvent === 'function') trackEvent('apk', 'Download', 'Direct APK');
         });
     });
+
+    // 8. Copy TestFlight Link
+    const copyBtn = document.getElementById('btn-copy-link');
+    const copySuccess = document.getElementById('copy-success');
+    const testFlightLink = 'https://testflight.apple.com/join/Std3CMs1';
+
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(testFlightLink).then(() => {
+                // Show success message
+                copySuccess.classList.add('show');
+
+                // Change button text temporarily
+                const btnText = copyBtn.querySelector('span');
+                const currentLang = document.documentElement.getAttribute('lang') || 'ar';
+                const originalText = btnText.textContent;
+                btnText.textContent = translations[currentLang].popup_copied;
+
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    copySuccess.classList.remove('show');
+                    btnText.textContent = originalText;
+                }, 2000);
+
+                // Track event
+                if (typeof trackEvent === 'function') trackEvent('ios', 'CopyLink', 'TestFlight');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = testFlightLink;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                copySuccess.classList.add('show');
+                setTimeout(() => copySuccess.classList.remove('show'), 2000);
+            });
+        });
+    }
 });
