@@ -276,4 +276,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         });
     }
+
+    // Accordion functionality for Content Index
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        header.addEventListener('click', () => {
+            // Toggle active class
+            item.classList.toggle('active');
+        });
+    });
 });

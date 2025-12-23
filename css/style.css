@@ -439,6 +439,71 @@ html[lang="en"] body {
     background: #0d0d12;
 }
 
+.syllabus-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 50px;
+}
+
+.syllabus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.syllabus-category {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-m);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.syllabus-category:hover {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    margin-top: 15px;
+}
+
 .syllabus-container {
     max-width: 900px;
     margin: 40px auto 0;
@@ -470,6 +535,18 @@ html[lang="en"] body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.syllabus-list li {
+    color: var(--text-muted);
+    font-family: var(--font-en);
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.syllabus-list li:last-child {
+    border-bottom: none;
 }
 
 .syllabus-item {
