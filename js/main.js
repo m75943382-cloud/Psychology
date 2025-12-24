@@ -190,9 +190,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // 5. Analytics
+    // 5. Analytics
     const trackEvent = (platform, eventName, contentName) => {
-        if (typeof fbq === 'function') fbq('track', eventName, { content_name: contentName });
-        if (typeof gtag === 'function') gtag('event', 'conversion', { 'send_to': 'G-M8GBYMDTLG', 'event_category': 'App Download', 'event_label': contentName });
+        const isCustom = eventName.startsWith('fellow_');
+        if (typeof fbq === 'function') {
+            if (isCustom) {
+                fbq('trackCustom', eventName, { content_name: contentName });
+            } else {
+                fbq('track', eventName, { content_name: contentName });
+            }
+        }
+        if (typeof gtag === 'function') gtag('event', isCustom ? 'custom_event' : 'conversion', { 'send_to': 'G-M8GBYMDTLG', 'event_category': isCustom ? eventName : 'App Download', 'event_label': contentName });
         console.log(`[Analytics] Tracked ${platform}: ${eventName} - ${contentName}`);
     };
 
@@ -220,20 +228,38 @@ document.addEventListener('DOMContentLoaded', async () => {
         statsObserver.observe(statsSection);
     }
 
-    // 7. Direct APK Download Message
+    // 7. Direct APK Download Message & Tracking
     document.querySelectorAll('.btn-apk').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent immediate navigation
+            e.preventDefault();
             const currentLang = document.documentElement.getAttribute('lang') || 'ar';
             const msg = translations[currentLang].apk_download_msg;
+
+            // Track Event with CUSTOM NAME
+            trackEvent('apk', 'fellow_psycho_DownloadAPK', 'Direct APK');
+
             alert(msg);
             // Start download after user clicks OK
             const downloadUrl = btn.getAttribute('href');
             if (downloadUrl) {
                 window.location.href = downloadUrl;
             }
-            // Optional: Track Event
-            if (typeof trackEvent === 'function') trackEvent('apk', 'Download', 'Direct APK');
+        });
+    });
+
+    // 8. WhatsApp Tracking
+    // Floating WhatsApp Button (Inquiry -> Assist)
+    const floatingWA = document.querySelector('.whatsapp-btn');
+    if (floatingWA) {
+        floatingWA.addEventListener('click', () => {
+            trackEvent('whatsapp_floating', 'fellow_psycho_WhatsappAssist', 'Floating WhatsApp Inquiry');
+        });
+    }
+
+    // CTA Card WhatsApp Buttons (Download Help)
+    document.querySelectorAll('.btn-whatsapp-cta').forEach(btn => {
+        btn.addEventListener('click', () => {
+            trackEvent('whatsapp_cta', 'fellow_psycho_WhatsappDownload', 'CTA Card WhatsApp Inquiry');
         });
     });
 
